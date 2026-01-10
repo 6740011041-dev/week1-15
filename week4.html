@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="th"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>หน้าแสดงรายการสินค้า</title>
+    <style> 
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        .container { max-width: 960px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
+        h1, h2 { color: #333; }
+        form div { margin-bottom: 10px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"],
+         input[type="number"],
+          select { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+          button { padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+          table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+          th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+          th { background-color: #f2f2f2; }
+          </style>
+          </head>
+          <body>
+            <div class="container">
+                <header>
+                    <h1>ร้านค้าออนไลน์ของฉัน</h1>
+                    <img src="images/pet.png" alt="pet shop" class="logo-img">
+                    <style>
+                      .logo-img{
+                        width: 100px;
+                        height: 100px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                      }
+                    </style>
+                    <nav>
+                        <ul>
+                            <li>หน้าแรก</li>
+                            <li>สินค้าทั้งหมด</li>
+                            <li>เกี่ยวกับเรา</li>
+                            <li>ติดต่อ</li>
+                        </ul>
+                    </nav>
+                </header>
+                <section>
+  <h2>ค้นหาสินค้า</h2>
+  <form method="get" action="">
+    <!-- ช่องค้นหาชื่อสินค้า -->
+    <label for="product-name">ชื่อสินค้า:</label>
+    <input 
+      type="text" 
+      id="product-name" 
+      name="product_name" 
+      placeholder="กรอกชื่อสินค้าที่ต้องการ">
+
+    <!-- Dropdown เลือกประเภทสินค้า -->
+    <label for="category">ประเภทสินค้า:</label>
+    <select id="category" name="category">
+      <option value="">-- เลือกประเภทสินค้า --</option>
+      <option value="อาหาร">อาหาร</option>
+      <option value="ของเล่น">ของเล่น</option>
+      <option value="อุปกรณ์">อุปกรณ์</option>
+    </select>
+
+    <!-- ช่วงราคาสินค้า -->
+    <label for="min-price">ราคาต่ำสุด:</label>
+    <input 
+      type="number" 
+      id="min-price" 
+      name="min_price" 
+      placeholder="0">
+
+    <label for="max-price">ราคาสูงสุด:</label>
+    <input 
+      type="number" 
+      id="max-price" 
+      name="max_price" 
+      placeholder="0">
+
+    <!-- ปุ่มส่งฟอร์ม -->
+    <button type="submit">ค้นหา</button>
+  </form>
+</section>
+<section>
+  <h2>รายการสินค้า</h2>
+  <table border="1" cellspacing="0" cellpadding="5">
+    <!-- ส่วนหัวของตาราง -->
+    <thead>
+      <tr>
+        <th>รหัสสินค้า</th>
+        <th>ชื่อสินค้า</th>
+        <th>ประเภท</th>
+        <th>ราคา (บาท)</th>
+      </tr>
+    </thead>
+
+    <!-- ข้อมูลสินค้า -->
+    <tbody>
+      <tr>
+        <td>001</td>
+        <td>อาหารสุนัข</td>
+        <td>อาหาร</td>
+        <td>150</td>
+      </tr>
+      <tr>
+        <td>002</td>
+        <td>ของเล่นแมว</td>
+        <td>ของเล่น</td>
+        <td>80</td>
+      </tr>
+      <tr>
+        <td>003</td>
+        <td>กรงนกเล็ก</td>
+        <td>อุปกรณ์</td>
+        <td>1200</td>
+      </tr>
+    </tbody>
+
+    <!-- ส่วนท้ายของตาราง -->
+    <tfoot>
+      <tr>
+        <td colspan="3" style="text-align:right;"><strong>จำนวนสินค้าทั้งหมด:</strong></td>
+        <td>3</td>
+      </tr>
+    </tfoot>
+  </table>
+</section>
+
+                </div>
+            </body>
+            </html>

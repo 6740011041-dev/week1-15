@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Profile Card</title>
+<style>/* CSS ของคุณจะอยู่ที่นี่ */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5;}
+    .profile-card{
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+        margin: 40px auto;
+        position: relative;
+    }
+    .profile-img{
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid #ffffff;
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #ffffff;
+    }
+    .card-header{
+        background-color: #4a90e2;
+        height: 120px;
+        position: relative;
+    }
+    .card-body {
+        padding: 80px 20px 24px;
+    }
+
+    .profile-name{
+        font-size: 22px;
+        font-weight: bold;
+        color: #333333;
+        margin-bottom: 6px;
+    }
+    .profile-title {
+        font-size: 16px;
+        color: #777777;
+        margin-bottom: 12px;
+    }
+    .profile-description {
+        font-size: 14px;
+        color: #555555;
+        line-height: 1.6;
+    }
+    .card-footer {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        padding: 16px;
+        border-top: 1px solid #eeeeee;
+    }
+    .social-link {
+        background-color: #f1f1f1;
+        border-radius: 50%;
+        transition: 0.3s;
+    }
+
+    .social-link:hover{
+        background-color: sienna;
+        color: #ffffff;
+    }
+
+</style>
+</head>
+<body>
+    <div class="profile-card">
+    <div class="card-header">
+    <img src="images/imges/moo.jpg" alt="Profile Picture" class="profile-img">
+</div>
+    <div class="card-body">
+    <h2 class="profile-name">ชื่อผู้ใช้</h2>
+    <p class="profile-title">Web Design</p>
+    <p class="profile-description">คำอธิบายสั้นๆ เกี่ยวกับผู้ใช้หรือความสนใจ</p>
+</div>
+    <div class="card-footer">
+    <a href="#" class="social-link">Facebook</a>
+    <a href="#" class="social-link">Twitter</a>
+    <a href="#" class="social-link">LinkedIn</a>
+</div>
+</div>
+</body>
+</html>
